@@ -1,0 +1,110 @@
+The following settings are for MusicBrainz Picard Version 1.0 as seen in Kubuntu 12.10 amd64.
+They are aimed at being used together with perfect-flac-encode.
+They are also aimed for continous updating of tags of files which are already tagged.
+For documentation of the options of Picard, see: http://musicbrainz.org/doc/MusicBrainz_Picard/Documentation/Options
+
+Installation:
+	Install the packages: picard, libchromaprint-tools
+
+After Picard is installed, run it and go to the following menus:
+	Options / Options:
+		General:
+			- Server address: musicbrainz.org
+			- Port: 80
+			- Username: <enter yours>
+			- Password: <enter yours>
+			- Automatically scan all new files: Disabled. We prefer to do stuff manually
+			- Ignore MBIDs when loading new files: Disabled. When updating your existing file tags, you will probably want to keep the chosen release as is.
+
+		Metadata:
+			- Translate artist names to this locale where possible: Disabled. We want accurate metadata, not convenience metadata.
+			- Use standardized artist names: Disabled. TODO: Check whether this makes sense, see: http://musicbrainz.org/doc/Artist_Credit
+			- Convert Unicode punctuation characters to ASCII: Disabled. TODO: Should be decided according to http://forums.musicbrainz.org/viewtopic.php?id=4121
+			- Use release relationships: Enabled. The more metadata we provide the better.
+			- Use track relationships: Enabled. The more metadata we provide the better.
+			- Use folksonomy tags as genres: Enabled. While "Genre" is generally a poor concept because it is impossible to accurately determine, it is nice to be able to filter your library by a certain genre when having guests. And because it is very easy to understand that it can never be accurate, everybody will know that and not consider it as absolute truth anyway.
+			- Various artists: "Various Artists"
+			- Non-album-tracks: "[non-album tracks]"
+			
+			Preferred Releases:
+				- Preferred release types: All sliders at middle position
+				- Preferred release countries: <empty>
+				- Preferred release formats: <empty>
+				
+			Folksonomy Tags:
+				Ignore tags: "seen live,favorites,fixme,owned"
+				Only use my tags: Disabled
+				Minimal tag usage: 90%. TODO: Experiment with this. Read up on how this works.
+				Maximum number of tags: 1. Most music players provide an option to view the library sorted by genre and this will probably only work with a single-value genre. TODO: Actually look at the most popular players and verify this.
+				Join multiple tags with: <empty>
+				
+			Ratings:
+				Enable track ratings: Disabled. Ratings are pure opinion and quite useless for others.
+				
+		Tags:
+			Write tags to files: Enabled.
+			Preserve timestamps of tagged files: Disabled. Then you can sort your music library by last modified date and update very old tags. TODO: Check whether the atime/btime stays as is.
+			Clear existing tags: Disabled. This will make it keep tags from perfect-flac-encode (especially ENCODEDBY).
+			Remove ID3 tags from FLAC files: Enabled. Vorbis Comments are recommended for FLAC files. 
+			Remove APEv2 tags from MP3 files: Enabled.  ID3 is recommended for MP3s. 
+			Preserve these tags from being cleared or overwritten with MusicBrainz data: <empty>. TODO: Add perfect-flac-encode tags.
+			ID3v2 version: 2.3. Version 2.4 is the latest and recommended version, but its support in players is still lacking.
+			Also include ID3v1 tags in the files: Disabled. ID3v1.1 tags are obsolete and may not work with non-latin scripts. 
+			ID3v2 text encoding: UTF-16. The default for version 2.4 is UTF-8, the default for version 2.3 is UTF-16.
+			
+		Covert art:
+			Embed cover images into tags: Disabled. It doesn't make sense to bloat every single track with large images.
+			Save cover images as separate files: Enabled, value: "Cover"
+			Overwrite the file if it already exists: Enabled. We want to be able to continously keep our file's tags up to date. When updating tags, the cover art should also be updated.
+			
+		File naming:
+			Rename files when saving: Enabled.
+			Replace non-ASCII characters: Disabled. TODO: Check which encoding Picard actually uses when generating filenames. TODO: Check whether standard USB-stick/MP3-player/Android-USB-disk filesystems (VFAT, exFAT, etc) are able to handle this encoding.
+			Replace Windows-incompatible characters: Enabled.
+			Move files to this directory when saving: Enabled, select your desired directory.
+			Delete empty directories: Enabled. Useful for getting rid of things such as subdirectories for separate discs.
+			Move additional files: Enabled, "*"
+			Name files like this: "%albumartist% - $left(%date%,4) - %album%/$if($gt(%totaldiscs%,1),Disc $num(%discnumber%,2) - ,)$num(%tracknumber%,2) - %title%"
+
+		Fingerprinting:
+			Audio Fingerprinting: Enabled
+			Use AcoustID: Selected. AcoustID is the more open solution.
+			Fingerprint calculator: "/usr/bin/fpcalc".
+			API key: <enter your API key>
+			
+		CD Lookup:
+			Default CD-ROM drive to use for lookups: <select the drive you use for ripping>
+			
+		Plugins:
+			- Notice that you need to maximize the settings window to see the full description of a selected plugin.
+			Covert art Downloader: Selected. TODO: Figure out whether this is something separate from the standard "Cover Art" menu in the options.
+			Disc Numbers: Selected. TODO: The description of what this plugin does really sounds like it should be the default behavior. Figure out whether maybe it IS the default and this plugin is obsolete.
+			TODO: Last.fm / Last.fm plus: Compare those to the amount of folksonomy tags available on MusicBrainz.
+			TODO: Release Type: Maybe we should select this?
+			- TODO: Decide which other plugins we need.
+			
+		Advanced:
+			Web proxy:
+				Web Proxy: Disabled
+				
+			Matching:
+				Minimal similarity for file lookups: 70%
+				Minimal similarity for cluster lookups: 80%
+				Minimal similarity for matching files to tracks: 40%
+			
+			Scripting:
+				Tagger Script: Disabled
+				
+			Use Interface:
+					Show text labels under icon: Enabled.
+					Allow selection of multiple directories: Enabled. Its up to you to not misuse this.
+					Use advanced query syntax: Enabled. Documentation: http://musicbrainz.org/doc/Text_Search_Syntax
+					Show a quit confirmation dialog for unsaved changes: Enabled.
+					Uster interface language: System default
+					
+	
+	View menu:
+		File browser: Enabled
+		Cover art: Enabled
+		Tool bar: Enabled
+		Search bar: Enabled
