@@ -38,7 +38,7 @@ After Picard is installed, run it and go to the following menus:
 				
 		Tags:
 			Write tags to files: Enabled.
-			Preserve timestamps of tagged files: Disabled. Then you can sort your music library by last modified date and update very old tags. TODO: Check whether the atime/btime stays as is.
+			Preserve timestamps of tagged files: Disabled. Then you can sort your music library by last modified date and update very old tags.  In addition, when preserving timestamps is disabled, it WILL preserve the access-time of the files, which is useable as "creation"-time on Linux (as long as you mount with "noatime", which we strongly suggest). As the creation-time is what is most interesting to be preserved, disabling "Preserve timestamps" is okay. Also notice: Enabling "Preserve timestamps" will NOT preserve any of the timestamps of the main parent directory of an album if moving of the files is enabled, which we do enable. The permissions of the main parent directory would be the most interesting ones as they are the ones you can sort your library by in your file manager. As preserving those does not work, we have another reason for disabling "Preserve timestamps".
 			Clear existing tags: Disabled. This will make it keep tags from perfect-flac-encode (especially ENCODEDBY).
 			Remove ID3 tags from FLAC files: Enabled. Vorbis Comments are recommended for FLAC files. 
 			Remove APEv2 tags from MP3 files: Enabled.  ID3 is recommended for MP3s. 
