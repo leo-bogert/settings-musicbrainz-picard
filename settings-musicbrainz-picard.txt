@@ -54,7 +54,7 @@ After Picard is installed, run it and go to the following menus:
 			
 		File naming:
 			Rename files when saving: Enabled.
-			Replace non-ASCII characters: Disabled. TODO: Check which encoding Picard actually uses when generating filenames. TODO: Check whether standard USB-stick/MP3-player/Android-USB-disk filesystems (VFAT, exFAT, etc) are able to handle this encoding.
+			Replace non-ASCII characters: Disabled. The source code of Picard shows that they would be replaced by "_". We work on Linux which supports UTF-8 properly as standard charset so our filesystems can store Unicode properly. Most modern operating systems should support Unicode as well. Further, translating the characters is the job of the code for copying between filesystems which support Unicode and filesystems which don't. Also notice that pure ASCII is a very limited charset, many releases will contain non-ASCII characters.
 			Replace Windows-incompatible characters: Enabled.
 			Move files to this directory when saving: Enabled, select your desired directory.
 			Delete empty directories: Enabled. Useful for getting rid of things such as subdirectories for separate discs.

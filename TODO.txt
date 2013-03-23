@@ -1,0 +1,5 @@
+We use this file for storing our TODOs instead of the Github bugtracker because there seems to be no official way to export the issues there.
+We don't want to rely upon Github as a single point of failure.
+
+Non-critical TODOs:
+- I decided to set "Replace non-ASCII characters: Disabled.", see the actual settings for an explanation why. Nevertheless, we should check what happens when copying files which contain Unicode characters to standard USB-stick/MP3-player/Android-USB-disk filesystems (VFAT, exFAT, etc). If the KDE file copying tools which we use are not suitable for that transition, we might reconsider the replacement setting.
