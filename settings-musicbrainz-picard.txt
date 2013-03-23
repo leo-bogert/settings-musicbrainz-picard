@@ -13,7 +13,7 @@ After Picard is installed, run it and go to the following menus:
 
 		Metadata:
 			- Translate artist names to this locale where possible: Disabled. We want accurate metadata, not convenience metadata.
-			- Use standardized artist names: Disabled. TODO: Check whether this makes sense, see: http://musicbrainz.org/doc/Artist_Credit
+			- Use standardized artist names: Disabled. TODO: Resolve according to http://forums.musicbrainz.org/viewtopic.php?pid=21434
 			- Convert Unicode punctuation characters to ASCII: Disabled. The affected characters are in the metadata we received from the MusicBrainz database already. If it makes sense to remove them, MusicBrainz should do that in the official database. In other words: When tagging we should try to mess with the official MusicBrainz database contents as little as possible. Noitce: This setting is currently undocumented, the information here is taken from: http://forums.musicbrainz.org/viewtopic.php?id=4121
 			- Use release relationships: Enabled. The more metadata we provide the better.
 			- Use track relationships: Enabled. The more metadata we provide the better.
