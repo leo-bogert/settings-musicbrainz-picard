@@ -27,48 +27,48 @@ After Picard is installed, run it and go to the following menus:
 				- Preferred release formats: <empty>
 				
 			Folksonomy Tags:
-				Ignore tags: "seen live,favorites,fixme,owned"
-				Only use my tags: Disabled
-				Minimal tag usage: 90%. TODO: Experiment with this. Read up on how this works.
-				Maximum number of tags: 1. Most music players provide an option to view the library sorted by genre and this will probably only work with a single-value genre. TODO: Actually look at the most popular players and verify this.
-				Join multiple tags with: <empty>
+				- Ignore tags: "seen live,favorites,fixme,owned"
+				- Only use my tags: Disabled
+				- Minimal tag usage: 90%. TODO: Experiment with this. Read up on how this works.
+				- Maximum number of tags: 1. Most music players provide an option to view the library sorted by genre and this will probably only work with a single-value genre. TODO: Actually look at the most popular players and verify this.
+				- Join multiple tags with: <empty>
 				
 			Ratings:
-				Enable track ratings: Disabled. Ratings are pure opinion and quite useless for others.
+				- Enable track ratings: Disabled. Ratings are pure opinion and quite useless for others.
 				
 		Tags:
-			Write tags to files: Enabled.
-			Preserve timestamps of tagged files: Disabled. Then you can sort your music library by last modified date and update very old tags.  In addition, when preserving timestamps is disabled, it WILL preserve the access-time of the files, which is useable as "creation"-time on Linux (as long as you mount with "noatime", which we strongly suggest). As the creation-time is what is most interesting to be preserved, disabling "Preserve timestamps" is okay. Also notice: Enabling "Preserve timestamps" will NOT preserve any of the timestamps of the main parent directory of an album if moving of the files is enabled, which we do enable. The permissions of the main parent directory would be the most interesting ones as they are the ones you can sort your library by in your file manager. As preserving those does not work, we have another reason for disabling "Preserve timestamps".
-			Clear existing tags: Disabled. This will make it keep tags from perfect-flac-encode (especially ENCODEDBY).
-			Remove ID3 tags from FLAC files: Enabled. Vorbis Comments are recommended for FLAC files. 
-			Remove APEv2 tags from MP3 files: Enabled.  ID3 is recommended for MP3s. 
-			Preserve these tags from being cleared or overwritten with MusicBrainz data: <empty>. TODO: Add perfect-flac-encode tags.
-			ID3v2 version: 2.3. Version 2.4 is the latest and recommended version, but its support in players is still lacking.
-			Also include ID3v1 tags in the files: Disabled. ID3v1.1 tags are obsolete and may not work with non-latin scripts. 
-			ID3v2 text encoding: UTF-16. The default for version 2.4 is UTF-8, the default for version 2.3 is UTF-16.
+			- Write tags to files: Enabled.
+			- Preserve timestamps of tagged files: Disabled. Then you can sort your music library by last modified date and update very old tags.  In addition, when preserving timestamps is disabled, it WILL preserve the access-time of the files, which is useable as "creation"-time on Linux (as long as you mount with "noatime", which we strongly suggest). As the creation-time is what is most interesting to be preserved, disabling "Preserve timestamps" is okay. Also notice: Enabling "Preserve timestamps" will NOT preserve any of the timestamps of the main parent directory of an album if moving of the files is enabled, which we do enable. The permissions of the main parent directory would be the most interesting ones as they are the ones you can sort your library by in your file manager. As preserving those does not work, we have another reason for disabling "Preserve timestamps".
+			- Clear existing tags: Disabled. This will make it keep tags from perfect-flac-encode (especially ENCODEDBY).
+			- Remove ID3 tags from FLAC files: Enabled. Vorbis Comments are recommended for FLAC files. 
+			- Remove APEv2 tags from MP3 files: Enabled.  ID3 is recommended for MP3s. 
+			- Preserve these tags from being cleared or overwritten with MusicBrainz data: <empty>. TODO: Add perfect-flac-encode tags.
+			- ID3v2 version: 2.3. Version 2.4 is the latest and recommended version, but its support in players is still lacking.
+			- Also include ID3v1 tags in the files: Disabled. ID3v1.1 tags are obsolete and may not work with non-latin scripts. 
+			- ID3v2 text encoding: UTF-16. The default for version 2.4 is UTF-8, the default for version 2.3 is UTF-16.
 			
 		Covert art:
-			Embed cover images into tags: Disabled. It doesn't make sense to bloat every single track with large images.
-			Save cover images as separate files: Enabled, value: "Cover"
-			Overwrite the file if it already exists: Enabled. We want to be able to continously keep our file's tags up to date. When updating tags, the cover art should also be updated.
+			- Embed cover images into tags: Disabled. It doesn't make sense to bloat every single track with large images.
+			- Save cover images as separate files: Enabled, value: "Cover"
+			- Overwrite the file if it already exists: Enabled. We want to be able to continously keep our file's tags up to date. When updating tags, the cover art should also be updated.
 			
 		File naming:
-			Rename files when saving: Enabled.
-			Replace non-ASCII characters: Disabled. The source code of Picard shows that they would be replaced by "_". We work on Linux which supports UTF-8 properly as standard charset so our filesystems can store Unicode properly. Most modern operating systems should support Unicode as well. Further, translating the characters is the job of the code for copying between filesystems which support Unicode and filesystems which don't. Also notice that pure ASCII is a very limited charset, many releases will contain non-ASCII characters.
-			Replace Windows-incompatible characters: Enabled.
-			Move files to this directory when saving: Enabled, select your desired directory.
-			Delete empty directories: Enabled. Useful for getting rid of things such as subdirectories for separate discs.
-			Move additional files: Enabled, "*"
-			Name files like this: "%albumartist% - $left(%date%,4) - %album%/$if($gt(%totaldiscs%,1),Disc $num(%discnumber%,2) - ,)$num(%tracknumber%,2) - %title%"
+			- Rename files when saving: Enabled.
+			- Replace non-ASCII characters: Disabled. The source code of Picard shows that they would be replaced by "_". We work on Linux which supports UTF-8 properly as standard charset so our filesystems can store Unicode properly. Most modern operating systems should support Unicode as well. Further, translating the characters is the job of the code for copying between filesystems which support Unicode and filesystems which don't. Also notice that pure ASCII is a very limited charset, many releases will contain non-ASCII characters.
+			- Replace Windows-incompatible characters: Enabled.
+			- Move files to this directory when saving: Enabled, select your desired directory.
+			- Delete empty directories: Enabled. Useful for getting rid of things such as subdirectories for separate discs.
+			- Move additional files: Enabled, "*"
+			- Name files like this: "%albumartist% - $left(%date%,4) - %album%/$if($gt(%totaldiscs%,1),Disc $num(%discnumber%,2) - ,)$num(%tracknumber%,2) - %title%"
 
 		Fingerprinting:
-			Audio Fingerprinting: Enabled
-			Use AcoustID: Selected. AcoustID is the more open solution.
-			Fingerprint calculator: "/usr/bin/fpcalc".
-			API key: <enter your API key>
+			- Audio Fingerprinting: Enabled
+			- Use AcoustID: Selected. AcoustID is the more open solution.
+			- Fingerprint calculator: "/usr/bin/fpcalc".
+			- API key: <enter your API key>
 			
 		CD Lookup:
-			Default CD-ROM drive to use for lookups: <select the drive you use for ripping>
+			- Default CD-ROM drive to use for lookups: <select the drive you use for ripping>
 			
 		Plugins:
 			* Notice that you need to maximize the settings window to see the full description of a selected plugin.
@@ -83,33 +83,33 @@ After Picard is installed, run it and go to the following menus:
 			TODO: Last.fm / Last.fm plus: Compare those to the amount of folksonomy tags available on MusicBrainz.
 			- No release: Disabled. From looking at the source code, as of 2013-03-25 this doesn't actually have any code for detecting an "unknown origin". Instead, the purpose of this plugin seems to be to allow the user to decide that something is from an unknown origin and remove the tags then. We suggest using AcoustID as primary source of information when using Picard ("Scan" button), and the AcoustID identification should work even if you don't know where your release came from. Also, if an release is of a very strange origin, we shouldn't use it anyway, so we don't need this.
 			- Open files in the GUI environment: Enabled. Always useful to have.
-			TODO: Release Type: Maybe we should select this?
+			- TODO: Release Type: Maybe we should select this?
 			- ReplayGain: Disabled. TODO: Explain
 			- Title Case: Disabled. We shouldn't mess with official style guidelines.
 			- swapprefix function: Disabled. This is a function for scripting and we don't need it in our scripts.
 			
 		Advanced:
 			Web proxy:
-				Web Proxy: Disabled
+				- Web Proxy: Disabled
 				
 			Matching:
-				Minimal similarity for file lookups: 70%
-				Minimal similarity for cluster lookups: 80%
-				Minimal similarity for matching files to tracks: 40%
+				- Minimal similarity for file lookups: 70%
+				- Minimal similarity for cluster lookups: 80%
+				- Minimal similarity for matching files to tracks: 40%
 			
 			Scripting:
-				Tagger Script: Disabled
+				- Tagger Script: Disabled
 				
 			Use Interface:
-					Show text labels under icon: Enabled.
-					Allow selection of multiple directories: Enabled. Its up to you to not misuse this.
-					Use advanced query syntax: Enabled. Documentation: http://musicbrainz.org/doc/Text_Search_Syntax
-					Show a quit confirmation dialog for unsaved changes: Enabled.
-					Uster interface language: System default
+					- Show text labels under icon: Enabled.
+					- Allow selection of multiple directories: Enabled. Its up to you to not misuse this.
+					- Use advanced query syntax: Enabled. Documentation: http://musicbrainz.org/doc/Text_Search_Syntax
+					- Show a quit confirmation dialog for unsaved changes: Enabled.
+					- Uster interface language: System default
 					
 	
 	View menu:
-		File browser: Enabled
-		Cover art: Enabled
-		Tool bar: Enabled
-		Search bar: Enabled
+		- File browser: Enabled
+		- Cover art: Enabled
+		- Tool bar: Enabled
+		- Search bar: Enabled
