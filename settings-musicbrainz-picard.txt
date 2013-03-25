@@ -71,15 +71,22 @@ After Picard is installed, run it and go to the following menus:
 			Default CD-ROM drive to use for lookups: <select the drive you use for ripping>
 			
 		Plugins:
-			* Leave all unmentioned plugins unselected.
 			* Notice that you need to maximize the settings window to see the full description of a selected plugin.
 			- Add Cluster As Release: Selected. Very useful for adding new releases to the database.
+			- Classic Disc Numbers: Disabled. We shouldn't mess with official style guidelines (see http://musicbrainz.org/doc/Style/Old_style_practices). Also notice: Storing disc numbers in separate tags is necessary for players being able to group albums.
 			- Copy Cluster to Clipboard: Selected. Useful for updating existing releases in the database, for example such without track lengths.
 			- Covert Art Downloader: Selected. Even though the cover art options are available when you have this disabled, you need this plugin for the downloading to actually work (see http://musicbrainz.org/doc/MusicBrainz_Picard/Documentation/Options#Cover_art). The cover art downloading will be integrated in Picard versions above 1.2 (see http://musicbrainz.org/doc/MusicBrainz_Picard/Plugins#Plugins).
 			- Disc Numbers: NOT selected. This plugin is legacy. Disc numbers in the title are deprecated on MusicBrainz nowadays, they are stored in their own tag. See: http://musicbrainz.org/doc/Style/Old_style_practices
+			- Feat. Artists Removed: Disabled. We shouldn't mess with official style guidelines.
+			- Feat. Artists in Title: Disabled.  We shouldn't mess with official style guidelines. Also, it doesn't make any sense to store Artists in the Title-tag given that there is an Artist-tag.
+			- Generate Cuesheet: Disabled. The Cuesheet should be read from the CD by the ripping-software for accuracy. Further, we use perfect-flac-encode which copies the Cuesheet to the release directory.
 			TODO: Last.fm / Last.fm plus: Compare those to the amount of folksonomy tags available on MusicBrainz.
+			- No release: Disabled. From looking at the source code, as of 2013-03-25 this doesn't actually have any code for detecting an "unknown origin". Instead, the purpose of this plugin seems to be to allow the user to decide that something is from an unknown origin and remove the tags then. We suggest using AcoustID as primary source of information when using Picard ("Scan" button), and the AcoustID identification should work even if you don't know where your release came from. Also, if an release is of a very strange origin, we shouldn't use it anyway, so we don't need this.
+			- Open files in the GUI environment: Enabled. Always useful to have.
 			TODO: Release Type: Maybe we should select this?
-			- TODO: Decide which other plugins we need.
+			- ReplayGain: Disabled. TODO: Explain
+			- Title Case: Disabled. We shouldn't mess with official style guidelines.
+			- swapprefix function: Disabled. This is a function for scripting and we don't need it in our scripts.
 			
 		Advanced:
 			Web proxy:
