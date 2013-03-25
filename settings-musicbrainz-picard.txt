@@ -76,7 +76,7 @@ After Picard is installed, run it and go to the following menus:
 			- Classic Disc Numbers: Disabled. We shouldn't mess with official style guidelines (see http://musicbrainz.org/doc/Style/Old_style_practices). Also notice: Storing disc numbers in separate tags is necessary for players being able to group albums.
 			- Copy Cluster to Clipboard: Enabled. Useful for updating existing releases in the database, for example such without track lengths.
 			- Covert Art Downloader: Enabled. Even though the cover art options are available when you have this disabled, you need this plugin for the downloading to actually work (see http://musicbrainz.org/doc/MusicBrainz_Picard/Documentation/Options#Cover_art). The cover art downloading will be integrated in Picard versions above 1.2 (see http://musicbrainz.org/doc/MusicBrainz_Picard/Plugins#Plugins).
-			- Disc Numbers: NOT selected. This plugin is legacy. Disc numbers in the title are deprecated on MusicBrainz nowadays, they are stored in their own tag. See: http://musicbrainz.org/doc/Style/Old_style_practices
+			- Disc Numbers: Disabled. This plugin is legacy. Disc numbers in the title are deprecated on MusicBrainz nowadays, they are stored in their own tag. See: http://musicbrainz.org/doc/Style/Old_style_practices
 			- Feat. Artists Removed: Disabled. We shouldn't mess with official style guidelines.
 			- Feat. Artists in Title: Disabled.  We shouldn't mess with official style guidelines. Also, it doesn't make any sense to store Artists in the Title-tag given that there is an Artist-tag.
 			- Generate Cuesheet: Disabled. The Cuesheet should be read from the CD by the ripping-software for accuracy. Further, we use perfect-flac-encode which copies the Cuesheet to the release directory.
