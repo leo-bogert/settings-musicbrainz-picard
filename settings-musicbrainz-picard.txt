@@ -74,7 +74,7 @@ After Picard is installed, run it and go to the following menus:
 			* Leave all unmentioned plugins unselected.
 			* Notice that you need to maximize the settings window to see the full description of a selected plugin.
 			Covert art Downloader: Selected. TODO: Figure out whether this is something separate from the standard "Cover Art" menu in the options.
-			Disc Numbers: Selected. TODO: The description of what this plugin does really sounds like it should be the default behavior. Figure out whether maybe it IS the default and this plugin is obsolete.
+			- Disc Numbers: NOT selected. This plugin is legacy. Disc numbers in the title are deprecated on MusicBrainz nowadays, they are stored in their own tag. See: http://musicbrainz.org/doc/Style/Old_style_practices
 			TODO: Last.fm / Last.fm plus: Compare those to the amount of folksonomy tags available on MusicBrainz.
 			TODO: Release Type: Maybe we should select this?
 			- TODO: Decide which other plugins we need.
