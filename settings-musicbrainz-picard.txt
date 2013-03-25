@@ -83,7 +83,7 @@ After Picard is installed, run it and go to the following menus:
 			- Last.fm: Disabled. MusicBrainz does provide Folksonomy-tags for Genre. We should prefer those to the closed, proprietary Last.fm system.
 			- Last.fm plus: MusicBrainz does provide Folksonomy-tags for Genre. We should prefer those to the closed, proprietary Last.fm system. This also applies to the other content which this plugin provides.
 			- No release: Disabled. From looking at the source code, as of 2013-03-25 this doesn't actually have any code for detecting an "unknown origin". Instead, the purpose of this plugin seems to be to allow the user to decide that something is from an unknown origin and remove the tags then. We suggest using AcoustID as primary source of information when using Picard ("Scan" button), and the AcoustID identification should work even if you don't know where your release came from. Also, if an release is of a very strange origin, we shouldn't use it anyway, so we don't need this.
-			- Open files in the GUI environment: Enabled. Always useful to have.
+			- Open files in the GUI environment: Disabled. As of version 1.0, right clicking a track will already contain a "Open folder" command without this plugin.
 			- Release Type: Disabled. We shouldn't mess with official style guidelines (see http://musicbrainz.org/doc/Style/Titles#Format_designations_in_titles).
 			- ReplayGain: Disabled. TODO: Explain
 			- Title Case: Disabled. We shouldn't mess with official style guidelines.
