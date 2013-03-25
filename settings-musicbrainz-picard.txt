@@ -30,7 +30,7 @@ After Picard is installed, run it and go to the following menus:
 				- Ignore tags: "seen live,favorites,fixme,owned"
 				- Only use my tags: Disabled
 				- Minimal tag usage: 90%. TODO: Experiment with this. Read up on how this works.
-				- Maximum number of tags: 1. Most music players provide an option to view the library sorted by genre and this will probably only work with a single-value genre. TODO: Actually look at the most popular players and verify this.
+				- Maximum number of tags: 1. For being compatible with the most players which support sorting by genre, we stick to a single genre.
 				- Join multiple tags with: <empty>
 				
 			Ratings:
