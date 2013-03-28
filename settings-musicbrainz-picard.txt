@@ -29,7 +29,7 @@ After Picard is installed, run it and go to the following menus:
 			Folksonomy Tags:
 				- Ignore tags: "seen live,favorites,fixme,owned"
 				- Only use my tags: Disabled
-				- Minimal tag usage: 90%. TODO: Experiment with this. Read up on how this works.
+				- Minimal tag usage: 50%. This doesn't seem to have an effect with "Maximum number of tags" = 1 (the following setting). It will add the single most voted tag even if it is below this threshold. Nevertheless, I have lowered it to 50% from the default of 90% as 50% is majority vote, which makes sense when voting for a single value.
 				- Maximum number of tags: 1. For being compatible with the most players which support sorting by genre, we stick to a single genre.
 				- Join multiple tags with: <empty>
 				
