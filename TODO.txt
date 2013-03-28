@@ -1,6 +1,9 @@
 We use this file for storing our TODOs instead of the Github bugtracker because there seems to be no official way to export the issues there.
 We don't want to rely upon Github as a single point of failure.
 
+Critical TODOs:
+- If album artist is "Various Artists", the track filenames should also contain the track artist.
+
 Non-critical TODOs:
 - I decided to set "Replace non-ASCII characters: Disabled.", see the actual settings for an explanation why. Nevertheless, we should check what happens when copying files which contain Unicode characters to standard USB-stick/MP3-player/Android-USB-disk filesystems (VFAT, exFAT, etc). If the KDE file copying tools which we use are not suitable for that transition, we might reconsider the replacement setting.
 - As of 2013-03-26, I decided to set the "Maximum number of tags" for the Genre to 1. This is for player compatibility because I suppose that many players only support a single-value genre. This is especially likely since Picard will use a special character to join multiple genres into a single value instead of writing multiple GENRE tags. We should wait a year and check whether Picard supports writing multiple GENRE tags then or players support splitting a single-value genre.
