@@ -114,3 +114,6 @@ After Picard is installed, run it and go to the following menus:
 		- Cover art: Enabled
 		- Tool bar: Enabled
 		- Search bar: Enabled
+
+	Right click the difference view (at the bottom):
+		- Show changes first: Enabled
